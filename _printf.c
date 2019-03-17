@@ -21,10 +21,13 @@ int _printf(char const *string, ...)
 		/* Looks for '&' */
 		if (string[i] == '%')
 		{
+			/* Iterates through struct until end */
 			for (j = 0; specifiers[j].function; j++)
 			{
+				/* Checks if char matches struct */
 				if (specifiers[j].c == string[i + 1])
 				{
+					/* Runs function pointer in struct */
 					bytes += specifiers[j].function(args);
 				}
 			}
