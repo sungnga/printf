@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 print_specs specifiers[] = {
-	{'c', &c_spec}
+	{'c', &c_spec},
 	{'s', &s_spec}
 };
 
