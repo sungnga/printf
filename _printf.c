@@ -12,8 +12,9 @@ int _printf(char const *string, ...)
 	print_specs specifiers[] = {
 	{'c', &c_spec},
 	{'s', &s_spec},
+	{'i', &int_spec},
 	{'d', &int_spec},
-	{'i', &int_spec}
+	{'\0', NULL}
 };
 	int bytes, i, j;
 	char p = '%';
