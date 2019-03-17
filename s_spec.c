@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * s_spec - handles percent s specifier
+ * @args: variable argument pointer
+ * Return: byte size in int type
+ */
 int s_spec(va_list args)
 {
 	int bytes;
