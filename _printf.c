@@ -2,7 +2,7 @@
 
 print_specs specifiers[] = {
 	{'c', &c_spec},
-  {'s', &s_spec},
+ 	{'s', &s_spec},
 	{'d', &int_spec},
 	{'i', &int_spec}
 };
@@ -12,7 +12,6 @@ int _printf(char const *string, ...)
 	int bytes, i, j;
 	char p = '%';
 	va_list args;
-	char p = '%';
 
 	bytes = 0;
 
