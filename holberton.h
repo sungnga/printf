@@ -8,20 +8,18 @@
 #include <unistd.h>
 
 /* STRUCT */
-int specifier(va_list arg);
-
+int specifier(va_list args);
 
 /**
- * struct specs - Struct specs
+ * struct specs - Struct of an array for specifiers
  * @c: char pointer parameter
  * @function: The function associated
  */
-typedef struct
-
+typedef struct specs
 {
 	char c;
-	int (*function)(va_list);
-}print_specs;
+	int (*function)(va_list args);
+} print_specs;
 
 /* PRINTF FUNCTION */
 int _printf(char const *string, ...);
@@ -33,4 +31,5 @@ int int_spec(va_list args);
 
 /* HELPER FUNCTIONS */
 int _putchar(char c);
+
 #endif
