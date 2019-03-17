@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 print_specs specifiers[] = {
-	{'c', &charspec}
+	{'c', &c_spec}
 };
 
 int _printf(char const *string, ...)

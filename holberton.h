@@ -20,6 +20,6 @@ typedef struct
 int _printf(char const *string, ...);
 
 /* SPECIFIER FUNCTIONS */
-int charspec(va_list args);
+int c_spec(va_list args);
 
 #endif
