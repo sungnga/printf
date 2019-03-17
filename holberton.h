@@ -29,5 +29,8 @@ int _printf(char const *string, ...);
 /* SPECIFIER FUNCTIONS */
 int c_spec(va_list args);
 int s_spec(va_list args);
+int int_spec(va_list args);
 
+/* HELPER FUNCTIONS */
+int _putchar(char c);
 #endif

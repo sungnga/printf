@@ -2,7 +2,9 @@
 
 print_specs specifiers[] = {
 	{'c', &c_spec},
-	{'s', &s_spec},
+  {'s', &s_spec},
+	{'d', &int_spec},
+	{'i', &int_spec}
 };
 
 int _printf(char const *string, ...)
@@ -10,6 +12,7 @@ int _printf(char const *string, ...)
 	int bytes, i, j;
 	char p = '%';
 	va_list args;
+	char p = '%';
 
 	bytes = 0;
 
@@ -24,10 +27,16 @@ int _printf(char const *string, ...)
 		if (string[i] == '%')
 		{
 			if (string[i + 1] == '%')
+				write (1, &p, 1);
+
+			/* Iterates through struct until end */
 				write(1, &p, 1);
 			for (j = 0; specifiers[j].function; j++)
 			{
+				/* Checks if char matches struct */
 				if (specifiers[j].c == string[i + 1])
+				{
+					/* Runs function pointer in struct */
 					bytes += specifiers[j].function(args);
 			}
 			i++;
