@@ -21,5 +21,5 @@ int _printf(char const *string, ...);
 
 /* SPECIFIER FUNCTIONS */
 int c_spec(va_list args);
-
+int per_spec(va_list args);
 #endif
