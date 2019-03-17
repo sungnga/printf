@@ -16,7 +16,7 @@ int specifier(va_list arg);
  * @c: char pointer parameter
  * @function: The function associated
  */
-typedef struct 
+typedef struct
 
 {
 	char c;
