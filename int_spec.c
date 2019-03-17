@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+* _printint - a function that prints the integer from int_spec
+* @i: integer
+*
+* Return: byte size
+*/
+
 static int _printint(signed int i)
 {
 	int bytes;
@@ -17,10 +24,17 @@ static int _printint(signed int i)
 	else
 		num = (1 % 10) + '0';
 
-	bytes += write (1, &num, 1);
+	bytes += write(1, &num, 1);
 
 	return (bytes);
 }
+
+/**
+* int_spec - a function that handles %d and %i conversion specifiers
+* @args: variable list of arguments
+*
+* Return: byte size
+*/
 
 int int_spec(va_list args)
 {
@@ -33,4 +47,3 @@ int int_spec(va_list args)
 
 	return (bytes);
 }
-
