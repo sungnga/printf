@@ -2,12 +2,13 @@
 
 print_specs specifiers[] = {
 	{'c', &c_spec},
-	{'s', &s_spec}
+	{'s', &s_spec},
 };
 
 int _printf(char const *string, ...)
 {
 	int bytes, i, j;
+	char p = '%';
 	va_list args;
 
 	bytes = 0;
@@ -22,21 +23,19 @@ int _printf(char const *string, ...)
 		/* Looks for '&' */
 		if (string[i] == '%')
 		{
+			if (string[i + 1] == '%')
+				write(1, &p, 1);
 			for (j = 0; specifiers[j].function; j++)
 			{
 				if (specifiers[j].c == string[i + 1])
-				{
 					bytes += specifiers[j].function(args);
-				}
 			}
 			i++;
 		}
 
 		/* For everything else that is not the '%c' */
 		else
-		{
 			bytes += write(1, string + i, 1);
-		}
 	}
 
 	va_end(args);
