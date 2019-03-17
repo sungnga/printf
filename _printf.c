@@ -2,6 +2,7 @@
 
 print_specs specifiers[] = {
 	{'c', &c_spec}
+	{'s', &s_spec}
 };
 
 int _printf(char const *string, ...)
@@ -30,7 +31,7 @@ int _printf(char const *string, ...)
 			}
 			i++;
 		}
-		
+
 		/* For everything else that is not the '%c' */
 		else
 		{
@@ -41,5 +42,4 @@ int _printf(char const *string, ...)
 	va_end(args);
 
 	return (bytes);
-		
 }
