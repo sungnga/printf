@@ -10,7 +10,14 @@
 /* STRUCT */
 int specifier(va_list arg);
 
-typedef struct 
+
+/**
+ * struct specs - Struct specs
+ * @c: char pointer parameter
+ * @function: The function associated
+ */
+typedef struct
+
 {
 	char c;
 	int (*function)(va_list);
@@ -21,7 +28,7 @@ int _printf(char const *string, ...);
 
 /* SPECIFIER FUNCTIONS */
 int c_spec(va_list args);
-int per_spec(va_list args);
+int s_spec(va_list args);
 int int_spec(va_list args);
 
 /* HELPER FUNCTIONS */
