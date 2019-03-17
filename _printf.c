@@ -1,8 +1,12 @@
 #include "holberton.h"
 
 print_specs specifiers[] = {
+<<<<<<< HEAD
 	{'c', &c_spec},
 	{'s', &s_spec}
+=======
+	{'c', &c_spec}
+>>>>>>> 584fa903687506d4bd7ce23be41201433693f0ea
 };
 
 int _printf(char const *string, ...)
@@ -31,6 +35,10 @@ int _printf(char const *string, ...)
 			}
 			i++;
 		}
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 584fa903687506d4bd7ce23be41201433693f0ea
 		/* For everything else that is not the '%c' */
 		else
 		{
@@ -41,4 +49,8 @@ int _printf(char const *string, ...)
 	va_end(args);
 
 	return (bytes);
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 584fa903687506d4bd7ce23be41201433693f0ea
 }
