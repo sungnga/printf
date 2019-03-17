@@ -10,11 +10,11 @@
 /* STRUCT */
 int specifier(va_list arg);
 
-typedef struct
+typedef struct 
 {
 	char c;
-	int (*specifier)(va_list);
-}spec_t;
+	int (*function)(va_list);
+}print_specs;
 
 /* PRINTF FUNCTION */
 int _printf(char const *string, ...);

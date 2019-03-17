@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-spec_t specifiers[] = {
+print_specs specifiers[] = {
 	{'c', &charspec}
 };
 
@@ -21,11 +21,11 @@ int _printf(char const *string, ...)
 		/* Looks for '&' */
 		if (string[i] == '%')
 		{
-			for (j = 0; specifiers[j].specifier; j++)
+			for (j = 0; specifiers[j].function; j++)
 			{
 				if (specifiers[j].c == string[i + 1])
 				{
-					bytes += specifiers[j].specifier(args);
+					bytes += specifiers[j].function(args);
 				}
 			}
 			i++;
