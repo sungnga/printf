@@ -4,7 +4,8 @@ print_specs specifiers[] = {
 	{'c', &c_spec},
 	{'s', &s_spec},
 	{'i', &int_spec},
-	{'d', &int_spec}
+	{'d', &int_spec},
+	{'\0', NULL}
 };
 
 int _printf(char const *string, ...)
