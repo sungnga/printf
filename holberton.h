@@ -1,23 +1,31 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef _HOLBERTON_H
+#define _HOLBERTON_H
 
+/* LIBRARIES */
 #include <stdarg.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include <unistd.h>
 
-/* PRINTF FUNCTION */
-int _printf(char const *string, ...);
+/* STRUCT */
+int specifier(va_list arg);
 
 /**
  * struct specs - Struct specs
  * @c: char pointer parameter
  * @function: The function associated
  */
-typedef struct specs
+typedef struct
 {
-	char *c;
-	void (*function)(va_list ap);
-} print_specs;
+	char c;
+	int (*function)(va_list);
+}print_specs;
 
-#endif /* HOLBERTON_H */
+/* PRINTF FUNCTION */
+int _printf(char const *string, ...);
+
+/* SPECIFIER FUNCTIONS */
+int c_spec(va_list args);
+int s_spec(va_list args);
+
+#endif
