@@ -28,6 +28,8 @@ int _printf(char const *string, ...)
 	va_start(args, string);
 	for (i = 0; string && string[i]; i++)
 	{
+		if (string[0] == '%' && !string[1])
+			return (-1);
 		if (string[i] == '%')
 		{
 			if (string[i + 1] == '%')
