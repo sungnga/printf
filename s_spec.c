@@ -14,6 +14,9 @@ int s_spec(va_list args)
 
 	bytes = 0;
 
+	if (s == NULL)
+		s = "(null)";
+
 	for (i = 0; s[i]; i++)
 		len++;
 
