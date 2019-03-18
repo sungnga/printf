@@ -22,7 +22,7 @@ static int _printint(signed int i)
 	if (i < 0)
 		num = (-1 * (i % 10) + '0');
 	else
-		num = (1 % 10) + '0';
+		num = (i % 10) + '0';
 
 	bytes += write(1, &num, 1);
 
