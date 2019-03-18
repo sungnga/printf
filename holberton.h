@@ -28,6 +28,11 @@ int _printf(char const *string, ...);
 int c_spec(va_list args);
 int s_spec(va_list args);
 int int_spec(va_list args);
+int uint_spec(va_list args);
+int hex_spec(va_list args);
+int uhex_spec(va_list args);
+int oct_spec(va_list args);
+int bin_spec(va_list args);
 
 /* HELPER FUNCTIONS */
 int _putchar(char c);
