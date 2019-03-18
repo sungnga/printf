@@ -14,6 +14,11 @@ int _printf(char const *string, ...)
 	{'s', &s_spec},
 	{'i', &int_spec},
 	{'d', &int_spec},
+	{'b', &bin_spec},
+	{'u', &uint_spec},
+	{'x', &hex_spec},
+	{'X', &uhex_spec},
+	{'o', &oct_spec},
 	{'\0', NULL}
 };
 	int bytes, i, j;
