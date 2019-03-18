@@ -31,7 +31,7 @@ int _printf(char const *string, ...)
 		if (string[i] == '%')
 		{
 			if (string[i + 1] == '%')
-				write(1, &p, 1);
+				bytes += write(1, &p, 1);
 			for (j = 0; specifiers[j].function; j++)
 			{
 				if (specifiers[j].c == string[i + 1])
