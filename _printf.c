@@ -1,9 +1,15 @@
 #include "holberton.h"
+int _putchar(char c);
 
 /**
 * _printf - Jeremy and Nga's custom printf function
 * @string: pointer to string in the 1st parameter of _printf
 * Return: byte size
+*	{'b', &bin_spec},
+*	{'u', &uint_spec},
+*	{'x', &hex_spec},
+*	{'X', &uhex_spec},
+*	{'o', &oct_spec},
 */
 int _printf(char const *string, ...)
 {
@@ -12,11 +18,6 @@ int _printf(char const *string, ...)
 	{'s', &s_spec},
 	{'i', &int_spec},
 	{'d', &int_spec},
-	{'b', &bin_spec},
-	{'u', &uint_spec},
-	{'x', &hex_spec},
-	{'X', &uhex_spec},
-	{'o', &oct_spec},
 	{'\0', NULL}
 };
 	int bytes = 0, i, j;
@@ -31,11 +32,23 @@ int _printf(char const *string, ...)
 		if (string[i] == '%')
 		{
 			if (string[i + 1] == '%')
+			{
 				bytes += write(1, &p, 1);
-			for (j = 0; specifiers[j].function; j++)
+				i++;
+				continue;
+			}
+			for (j = 0; j < 5; j++)
 			{
 				if (specifiers[j].c == string[i + 1])
+				{
 					bytes += specifiers[j].function(args);
+					break;
+				}
+				else if (!specifiers[j].c)
+				{
+					bytes += _putchar('%');
+					bytes += _putchar(string[i + 1]);
+				}
 			}
 			i++;
 		}
@@ -44,4 +57,17 @@ int _printf(char const *string, ...)
 	}
 	va_end(args);
 	return (bytes);
+}
+
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
