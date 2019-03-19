@@ -3,10 +3,8 @@
 /**
 * _printf - Jeremy and Nga's custom printf function
 * @string: pointer to string in the 1st parameter of _printf
-*
 * Return: byte size
 */
-
 int _printf(char const *string, ...)
 {
 	print_specs specifiers[] = {
@@ -26,10 +24,10 @@ int _printf(char const *string, ...)
 	va_list args;
 
 	va_start(args, string);
+	if (!string || (string[0] == '%' && !string[1]))
+		return (-1);
 	for (i = 0; string && string[i]; i++)
 	{
-		if (string[0] == '%' && !string[1])
-			return (-1);
 		if (string[i] == '%')
 		{
 			if (string[i + 1] == '%')
