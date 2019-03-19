@@ -24,7 +24,7 @@ int _printf(char const *string, ...)
 	va_list args;
 
 	va_start(args, string);
-	if (!string || string[0] == '%' && !string[1])
+	if (!string || (string[0] == '%' && !string[1]))
 		return (-1);
 	for (i = 0; string && string[i]; i++)
 	{
