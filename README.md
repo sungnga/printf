@@ -1,5 +1,5 @@
 # _printf
-##### A homegrown printing function that simulates the printf function from the C Standard Library. This is a simple clone of the printf function which uses variadic functions, structs and specifier functions that read characters after a specifier character is read in the string. The output of this printf function will be an exact match of the output from the printf function given in the C standard library (given that there are functions that match with the specifier functions in this custom printf function).
+A homegrown printing function that simulates the printf function from the C Standard Library. This is a simple clone of the printf function which uses variadic functions, structs and specifier functions that read characters after a specifier character is read in the string. The output of this printf function will be an exact match of the output from the printf function given in the C standard library (given that there are functions that match with the specifier functions in this custom printf function).
 ---
 ### Prototype
 #### `int _printf(const char *string, ...)`
@@ -40,8 +40,8 @@ Function name | Description | Format Specifier
 ### Files
 File Name | Description | Link
 --- | --- | ---
-`holberton.h` | Header file with function prototypes and struct | [holberton.h](
-`_printf.c` | Produces an output according to specifiers 
+`holberton.h` | Header file with function prototypes and struct | [holberton.h](https://github.com/jembantonio/printf/blob/master/holberton.h)
+`_printf.c` | Produces an output according to specifiers | [_printf.c](https://github.com/jembantonio/printf/blob/master/_printf.c)
 `c_spec.c` | File containing the character specifier function |[c_spec.c](https://github.com/jembantonio/printf/blob/jeremy/c_spec.c)
 `s_spec.c` | File containing the string specifier function |[s_spec.c](https://github.com/jembantonio/printf/blob/jeremy/s_spec.c)
 `int_spec.c` | File containing the decimal and integer specifier functions |[int_spec.c](https://github.com/jembantonio/printf/blob/jeremy/int_spec.c)
@@ -51,11 +51,12 @@ File Name | Description | Link
 `oct_spec.c` | File containing the decimal to octal translator function |[oct_spec.c](https://github.com/jembantonio/printf/blob/jeremy/oct_spec.c)
 `uint_spec.c` | File containing the unsigned integer function |[uint_spec.c](https://github.com/jembantonio/printf/blob/jeremy/uint_spec.c)
 
-### About
-This project was created by - [Jeremy Antonio](https://github.com/jembantonio) *jembantonio@gmail.com*  and 
+### Authors
+This project was created by - [Jeremy Antonio](https://github.com/jembantonio) (*jembantonio@gmail.com*)  and 
 [Nga La](https://github.com/sungnga) at [Holberton
 School](http://holbertonschool.com).
 
+### About
 All files were created and compiled on `Ubuntu 14.04.4 LTS` using `GCC 4.8.4` with
 the following flags:
 
