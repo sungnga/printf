@@ -1,0 +1,65 @@
+.TH _printf 3 "19 March 2019" "1.00" "_printf man page"
+.SH NAME
+.B _printf
+- A custom-made function that is similor to the printf function in the standard library.
+.SH SYNOPSIS
+#include "holberton.h"
+.PP
+int _printf(const char *string, ...);
+.SH DESCRIPTION
+The _printf function is a variadic function that produces an output according to a format specifier and prints it to the standard output. It receives a variable number of arguments. The first argument is fixed and is the format string. It contains string literal and format specifier characters which to be replaced by the text obtained from the optional arguments.
+.SH RETURN VALUE
+Upon successful return, _printf returns the number of characters printed, excluding the null byte used to end strings.
+If the string is NULL or if the function encounters any errors, it returns -1.
+.SH FORMAT
+The format string is a character string, beginning and ending in its initial shift state, if any. Each conversion specification is introduced by the character %, and ends with a conversion specifier. The arguments must correspond properly with the conversion specifier.
+.SH CONVERSION SPECIFIERS
+A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
+.sp
+.B %c
+- Prints a single character.
+.sp
+.B %s
+- Prints text string (finished with '\\0')
+.sp
+.B %%
+- Prints the symbol % and no argument is converted
+.sp
+.B %i, %d
+- Prints integer signed decimal conversion
+.SH SEE ALSO
+.I printf(3)
+.SH EXAMPLE
+#include <limits.h>
+.sp
+#include <stdio.h>
+.sp
+#include "holberton.h"
+.sp
+int main(void)
+.sp
+{
+.IP
+int len;
+.IP
+int len2;
+.IP
+_printf("Len:[%d]\n", len);
+.IP
+_printf("Negative:[%d]\n", -762534);
+.IP
+_printf("Character:[%c]\n", 'H');
+.IP
+_printf("String:[%s]\n", "I am a string !");
+.IP
+len = _printf("Percent:[%%]\n");
+.IP
+return (0);
+.PP
+}
+.SH NOTES
+All files and code used to create _printf were created and compiled on Ubuntu 14.04.4 LTS using GCC 4.8.4
+.SH BUGS
+_printf does not handle the flag characters, field width, precision, and the length modifiers.
+.SH AUTHOR
+Nga La and Jeremy Antonio. Holberton School: cohort 8.
