@@ -1,7 +1,7 @@
 .TH _printf 3 "19 March 2019" "1.00" "_printf man page"
 .SH NAME
 .B _printf
-- A custom-made function that is similor to the printf function in the standard library.
+- A custom-made function that is similar to the printf function in the standard library.
 .SH SYNOPSIS
 #include "holberton.h"
 .PP
