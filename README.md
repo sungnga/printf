@@ -1,4 +1,5 @@
 # _printf
+## Description
 A homegrown printing function that simulates the printf function from the C Standard Library. This is a simple clone of the printf function which uses variadic functions, structs and specifier functions that read characters after a specifier character is read in the string. The output of this printf function will be an exact match of the output from the printf function given in the C standard library (given that there are functions that match with the specifier functions in this custom printf function).
 ---
 ### Prototype
