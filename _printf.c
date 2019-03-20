@@ -4,22 +4,17 @@ int _putchar(char c);
 /**
 * _printf - Jeremy and Nga's custom printf function
 * @string: pointer to string in the 1st parameter of _printf
+*
 * Return: byte size
-*	{'b', &bin_spec},
-*	{'u', &uint_spec},
-*	{'x', &hex_spec},
-*	{'X', &uhex_spec},
-*	{'o', &oct_spec},
 */
 int _printf(char const *string, ...)
 {
 	print_specs specifiers[] = {
-	{'c', &c_spec},
-	{'s', &s_spec},
-	{'i', &int_spec},
-	{'d', &int_spec},
-	{'\0', NULL}
-};
+	{'c', &c_spec},	{'s', &s_spec}, {'i', &int_spec}, {'d', &int_spec},
+	{'b', &bin_spec}, {'u', &uint_spec}, {'x', &hex_spec},
+	{'X', &uhex_spec}, {'o', &oct_spec}, {'\0', NULL}
+	};
+
 	int bytes = 0, i, j;
 	char p = '%';
 	va_list args;
@@ -37,7 +32,7 @@ int _printf(char const *string, ...)
 				i++;
 				continue;
 			}
-			for (j = 0; j < 5; j++)
+			for (j = 0; j <= 10; j++)
 			{
 				if (specifiers[j].c == string[i + 1])
 				{
