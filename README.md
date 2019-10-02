@@ -53,9 +53,9 @@ File Name | Description | Link
 `uint_spec.c` | File containing the unsigned integer function |[uint_spec.c](https://github.com/jembantonio/printf/blob/jeremy/uint_spec.c)
 
 ### Authors
-This project was created by - [Jeremy Antonio](https://github.com/jembantonio) (*jembantonio@gmail.com*)  and 
-[Nga La](https://github.com/sungnga) at [Holberton
-School](http://holbertonschool.com).
+This project was created by:
+* Jeremy Antonio [jembantonio](https://github.com/jembantonio) | [jembantonio@gmail.com](jembantonio@gmail.com) 
+* Nga La [sungnga](https://github.com/sungnga) | [nga422@gmail.com](nga422@gmail.com)
 
 ### About
 All files were created and compiled on `Ubuntu 14.04.4 LTS` using `GCC 4.8.4` with
